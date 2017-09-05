@@ -1,0 +1,59 @@
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-xs-12 col-md-offset-2">
+          <h1 class="text-center"><b>Свежие заявки</b></h1>
+          <div class="dropdown col-md-4 col-xs-6">Раздел:
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Все<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Новосибирск и область</a></li>
+                <li><a href="#">Екатеренбург и Свердловская область</a></li>
+                <li><a href="#">Красноярск</a></li>
+                <li><a href="#">Омская область</a></li>
+                <li><a href="#">Оренбургская область</a></li>
+              </ul>
+          </div>
+          <div class="dropdown col-md-4 col-xs-6" style="float: right !important;
+    text-align: right;">Регион:
+            <a href="#"  data-toggle="dropdown" class="dropdown-toggle">Новосибирск и область<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Новосибирск и область</a></li>
+                <li><a href="#">Екатеренбург и Свердловская область</a></li>
+                <li><a href="#">Красноярск</a></li>
+                <li><a href="#">Омская область</a></li>
+                <li><a href="#">Оренбургская область</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+          {% for number_order in range(orders) %}
+        <div class="col-md-8 col-xs-12 col-md-offset-2">
+          <hr>
+          <div class="col-xs-3">
+            <p class="text-muted">Вчера, в 21.30</p>
+          </div>
+            <div class="col-xs-3 col-xs-offset-6">
+              <a href="#"><span class="glyphicon glyphicon-star" style="margin 10 0 0 10"></span> В закладки</a>
+            </div>
+          <div class="col-xs-12">
+            <p>{{ orders_info }}</p>
+            <p><strong>{{ orders_person_name[number_order] }}</strong></p>
+            <button type="submit" class="btn btn-default btn-sm">Показать телефон</button>
+            <span class="text-muted">{{ value_views }}</span>
+          </div>
+        </div>
+          {% endfor %}
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-xs-12 col-md-offset-5">
+          <button type="button" class="btn btn-default" style="margin: 20px 0" >Посмотреть все заявки</button>
+        </div>
+      </div>
+    </div>
