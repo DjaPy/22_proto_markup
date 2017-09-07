@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 col-xs-12 col-md-offset-2">
+      <table class="table table-bordered">
+        {% for row in range(tables) %}
+        <tr>
+          <td>
+            <div class="col-sm-2 col-xs-2">
+              <img src="../static/img/logo.png" alt="logo">
+            </div>
+            <div class="col-sm-8 col-xs-10">
+              <h4>{{ company_name }}</h4>
+              <span><strong>Место деятельности:</strong> {{ company_location }}</span>
+              <span><strong>Продукция:</strong> {{ company_production }}</span>
+              <span><strong>Адрес:</strong> {{ company_address }}</span>
+              <span><strong>Телефон:</strong> {{ company_phone_number }}</span>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <div class="col-md-2 col-xs-12">
+      <button type="submit" class="btn btn-default">Оставить заявку</button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-xs-12 col-md-offset-4">
+
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8 col-xs-12 col-md-offset-2" style="margin-bottom: 20px">
+      <h4><a href="#">Оставить заявку</a></h4>
+    </div>
+  </div>
+</div>
