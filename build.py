@@ -62,10 +62,10 @@ requests_content = {
     'footer': True
 }
 
-specification_content = {
+catalog_content = {
     'user': USER,
     'specification': 'ЖБИ',
-    'tables': 4,
+    'tables': 6,
     'company_name': 'ООО Строй-Сервис-Монтаж',
     'company_location': 'Новосибирск',
     'company_production': 'ЖБИ, бетон',
@@ -80,10 +80,6 @@ profile_content = {
 }
 
 
-
-
-
-
 def check_dir_site(site):
     if not os.path.exists(site):
         os.mkdir(site)
@@ -92,7 +88,9 @@ def check_dir_site(site):
 if __name__== "__main__":
     name_folder_site = 'site'
     check_dir_site(name_folder_site)
-    site = make_site(outpath='site', contexts=[
-        ('index.html', index_content)
-    ])
+    site = make_site(outpath='site',
+                     contexts=[
+                         ('index.html', index_content),
+                         ('orders_page.html', index_content),
+                         ('dir_organizations.html', catalog_content)])
     site.render()
