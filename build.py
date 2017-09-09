@@ -1,7 +1,7 @@
 import os
 from staticjinja import make_site
 
-STATICPATH = "static/"
+
 USER = "Иван Иваныч"
 COMMENT_TEXT = 'Отличная площадка для поиска поставщиков! Есть конкуренция.Продавцы здорово депенгуют. Я постоянный пользователь данного сервиса. Спасибо за труд!'
 ORDER_TEXT = '60шт. ПК от 72-15  до ПК 21-15 можно без сахара. Каргат, с доставкой до порога.'
@@ -25,19 +25,7 @@ index_content = {
                 'Инокентий Правильный, г. Каркарум',
                 'Саркисян Конте, г. пл. Марс',
                 ],
-    'value_views': '12 просмотров',
-    'footer': True
-}
-
-org_catalog_content = {
-    'user': USER,
-    'tables': 4,
-    'company_name': 'ООО Строй-Сервис-Монтаж',
-    'company_location': 'Новосибирск',
-    'company_production': 'ЖБИ, бетон',
-    'company_address': 'Под часами, на том же месте',
-    'company_phone_number': '00-00-00',
-    'footer': True
+    'value_views': VIEWS_VALUE,
 }
 
 organisation_content = {
@@ -49,17 +37,6 @@ organisation_content = {
     'company_address': 'Под часами, на том же месте',
     'company_phone_number': '00-00-00',
     'specialties':  ['Плиты', 'Перекрытия', 'Доставляем быстро'],
-    'footer': True
-}
-
-requests_content = {
-    'user': USER,
-    'requests': 6,
-    'time': 'вчера, в 12:50',
-    'request_info': ORDER_TEXT,
-    'request_person_name': 'Алексей',
-    'views_value': '12 просмотров',
-    'footer': True
 }
 
 catalog_content = {
@@ -71,12 +48,6 @@ catalog_content = {
     'company_production': 'ЖБИ, бетон',
     'company_address': 'Под часами, на том же месте',
     'company_phone_number': '00-00-00',
-    'footer': True
-}
-
-profile_content = {
-    'user': USER,
-    'footer': False
 }
 
 
@@ -92,5 +63,8 @@ if __name__== "__main__":
                      contexts=[
                          ('index.html', index_content),
                          ('orders_page.html', index_content),
-                         ('dir_organizations.html', catalog_content)])
+                         ('dir_organizations.html', catalog_content),
+                         ('current_dir_organization.html', catalog_content),
+                         ('organization_page.html', organisation_content)
+                     ])
     site.render()
