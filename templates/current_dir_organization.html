@@ -1,0 +1,47 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-xs-12">
+          <img src="../static/img/logo__56x56.png" alt="logo">
+        </div>
+        <div class="col-md-8 col-xs-12">
+          <ol class="breadcrumb">
+            <li>
+              <a href="index.html">Главная</a>
+            </li>
+            <li>
+              <a href="dir_organizations.html">Каталог</a>
+            </li>
+            <li class="active">ЖБИ</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-xs-12 col-md-offset-2">
+          <h2 class="text-left">Производители и оптовые компании в Новосибирске и области</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-xs-12 col-md-offset-2">
+          <h4>ЖБИ</h4>
+        </div>
+      </div>
+    </div>
+
+
+{% include "_catalog_org.html" %}
+
+
+  {% include "_footer.html" %}
+
+{% endblock %}

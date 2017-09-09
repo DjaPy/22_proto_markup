@@ -1,0 +1,59 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/css/tabs.css">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-xs-12">
+          <img src="../static/img/logo__56x56.png" alt="logo">
+        </div>
+        <div class="col-md-8 col-xs-12">
+          <ol class="breadcrumb">
+            <li>
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="active">Личный кабинет</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-xs-12 col-md-offset-2">
+          <h1>Личный кабинет</h1>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <h4 style="margin-top: 40px"><a href="dir_organizations.html">Перейти к заявка</a></h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-xs-12">
+      <!-- tabs left -->
+          <div class="tabbable tabs-left">
+            <ul class="nav nav-tabs">
+              <li class="active" ><a href="#a" data-toggle="tab">Моя организация</a></li>
+              <li><a href="#b" data-toggle="tab">Смена пароля</a></li>
+              <li><a href="#c" data-toggle="tab">Моя рассылка</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="a">
+
+              </div>
+              <div class="tab-pane" id="b">
+
+              </div>
+              <div class="tab-pane" id="c">
+
+              </div>
+            </div>
+          </div>
+      <!-- /tabs -->
+        </div>
+      </div>
+    </div>
+{% endblock %}
