@@ -1,7 +1,7 @@
 # Suppliers in Novosibirsk
 GO! To link [Suppliers](https://djapy.github.io/22_proto_markup/site/index.html).
 
-#HowTo
+# HowTo
 
 Recomended use venv or virtualenv for better isolation. 
 
